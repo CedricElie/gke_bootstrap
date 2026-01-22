@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GKE Autopilot Cluster</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .info-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .info-section h2 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .info-section p {
+            color: #555;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        
+        .info-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .info-section li {
+            color: #555;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-section code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .status-badge {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .status-text {
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 GKE Autopilot</h1>
+        <p class="subtitle">Google Kubernetes Engine - Fully Managed Cluster</p>
+        
+        <div class="status">
+            <span class="status-badge">✓ Active</span>
+            <span class="status-text">Cluster is operational</span>
+        </div>
+        
+        <div class="info-section">
+            <h2>Cluster Information</h2>
+            <ul>
+                <li><strong>Cluster Name:</strong> <code>gke-autopilot-cluster</code></li>
+                <li><strong>Region:</strong> <code>us-central1</code></li>
+                <li><strong>Type:</strong> Autopilot (Fully Managed)</li>
+                <li><strong>Mode:</strong> VPC Native</li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>Network Configuration</h2>
+            <ul>
+                <li><strong>VPC Network:</strong> <code>gke-vpc</code></li>
+                <li><strong>Subnet:</strong> <code>gke-subnet</code> (10.0.0.0/24)</li>
+                <li><strong>Pod Network:</strong> <code>10.4.0.0/14</code></li>
+                <li><strong>Service Network:</strong> <code>10.8.0.0/20</code></li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>Service Accounts</h2>
+            <ul>
+                <li><strong>Nodes:</strong> <code>gke-nodes@ck-learn-gcp-thales.iam.gserviceaccount.com</code></li>
+                <li><strong>Workload:</strong> <code>gke-workload@ck-learn-gcp-thales.iam.gserviceaccount.com</code></li>
+                <li><strong>Identity:</strong> Workload Identity Enabled</li>
+            </ul>
+        </div>
+        
+        <div class="info-section">
+            <h2>Security Features</h2>
+            <ul>
+                <li>✓ Shielded Nodes Enabled</li>
+                <li>✓ Intranode Visibility Enabled</li>
+                <li>✓ Network Policy Enabled</li>
+                <li>✓ Cloud Logging Integration</li>
+                <li>✓ Cloud Monitoring Integration</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>GKE Autopilot Cluster deployed with Terraform</p>
+            <p>Project: ck-learn-gcp-thales</p>
+        </footer>
+    </div>
+</body>
+</html>
